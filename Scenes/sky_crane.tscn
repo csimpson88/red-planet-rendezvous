@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://vvjyfrl83r6y"]
+
+[ext_resource type="Script" path="res://Scripts/sky_crane.gd" id="1_3sn0n"]
+[ext_resource type="Texture2D" uid="uid://cmama77hq64t7" path="res://Images/SkyCrane.svg" id="1_o1r7k"]
+[ext_resource type="Texture2D" uid="uid://6uet783001qh" path="res://Images/Flame.svg" id="2_67swt"]
+[ext_resource type="AudioStream" uid="uid://dydlnmsnfw5wd" path="res://Audio/Thrust.wav" id="4_3irvw"]
+[ext_resource type="AudioStream" uid="uid://ieusthyy6rpy" path="res://Audio/Impact.wav" id="5_mx8op"]
+
+[node name="SkyCrane" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_3sn0n")
+
+[node name="LeftFlame" type="Sprite2D" parent="."]
+position = Vector2(-186, 99)
+rotation = 0.218166
+texture = ExtResource("2_67swt")
+centered = false
+offset = Vector2(-32, 0)
+
+[node name="RightFlame" type="Sprite2D" parent="."]
+position = Vector2(186, 99)
+rotation = -0.218166
+texture = ExtResource("2_67swt")
+centered = false
+offset = Vector2(-32, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 13)
+texture = ExtResource("1_o1r7k")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
+position = Vector2(0, -1)
+polygon = PackedVector2Array(-220, 94, -153, 108, -152, 64, -92, 43, -1, 31, 90, 43, 148, 60, 154, 108, 220, 92, 145, -38, 101, -67, 25, -80, -27, -80, -93, -69, -142, -41)
+
+[node name="ThrustNoise" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_3irvw")
+
+[node name="DamageNoise" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_mx8op")

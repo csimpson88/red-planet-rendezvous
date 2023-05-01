@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://e3kbqy102smx"]
+
+[ext_resource type="Texture2D" uid="uid://bl4lw7odcf0sl" path="res://Images/HeatShield.svg" id="1_dadfs"]
+
+[node name="HeatShield" type="RigidBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 110)
+texture = ExtResource("1_dadfs")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-336, 114, -254, 183, -152, 226, -65, 245, 65, 247, 154, 225, 252, 188, 339, 113, 325, 104, 244, 169, 145, 213, 64, 229, -61, 229, -152, 211, -249, 170, -326, 107)

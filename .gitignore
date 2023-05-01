@@ -1,0 +1,8 @@
+# Godot 4+ specific ignores
+.godot/
+.import/
+export.cfg
+export_presets.cfg
+.directory
+.DS_Store
+*~

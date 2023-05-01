@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="62.378967"
+   height="111"
+   viewBox="0 0 62.378967 111"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   sodipodi:docname="Sprites.svg"
+   inkscape:export-filename="Lander.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="1"
+     inkscape:cx="793"
+     inkscape:cy="439"
+     inkscape:window-width="2560"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer13">
+    <inkscape:grid
+       type="xygrid"
+       id="grid132"
+       dotted="false"
+       snapvisiblegridlinesonly="true"
+       empspacing="16"
+       empcolor="#000000"
+       empopacity="0.30196078"
+       originx="0"
+       originy="0" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2">
+    <color-profile
+       name="Agfa-:-Swop-Standard"
+       xlink:href="file:///C:/WINDOWS/system32/spool/drivers/color/RSWOP.icm"
+       id="color-profile51642" />
+    <mask
+       maskUnits="userSpaceOnUse"
+       id="mask50543">
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+         id="rect50545"
+         width="124.758"
+         height="139.90051"
+         x="201.44911"
+         y="1799.5995"
+         ry="0" />
+    </mask>
+    <mask
+       maskUnits="userSpaceOnUse"
+       id="mask50547">
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+         id="rect50549"
+         width="124.758"
+         height="139.90051"
+         x="201.44911"
+         y="1799.5995"
+         ry="0" />
+    </mask>
+  </defs>
+  <g
+     inkscape:groupmode="layer"
+     id="layer14"
+     inkscape:label="Buttons"
+     transform="translate(-686.62097,-1687.5995)">
+    <g
+       id="g50601">
+      <path
+         id="path50551"
+         style="display:inline;fill:#a6aeba;fill-opacity:1;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+         d="m 290.57617,1821.9258 -17.9082,17.8574 h 0.0508 c -4.14237,2.6639 -6.89063,7.29 -6.89063,12.6016 V 1911 c 0,8.31 6.69001,15 15,15 H 804 c 8.30999,0 15,-6.69 15,-15 v -58.6152 c 0,-4.5756 -2.0711,-8.6105 -5.28125,-11.3575 h 0.0996 l -22.39453,-19.1015 z"
+         mask="url(#mask50547)"
+         transform="matrix(-1,0,0,1,1012.8281,-129.40051)" />
+      <rect
+         style="display:inline;fill:#cdd2da;fill-opacity:1;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+         id="rect50553"
+         width="513"
+         height="67"
+         x="284.5"
+         y="1819"
+         ry="15"
+         mask="url(#mask50543)"
+         transform="matrix(-1,0,0,1,1012.8281,-129.40051)" />
+    </g>
+  </g>
+</svg>

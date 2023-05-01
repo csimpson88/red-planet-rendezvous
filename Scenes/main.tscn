@@ -1,0 +1,373 @@
+[gd_scene load_steps=35 format=3 uid="uid://86l7qdor52qe"]
+
+[ext_resource type="Script" path="res://Scenes/main.gd" id="1_3vy16"]
+[ext_resource type="PackedScene" uid="uid://vvjyfrl83r6y" path="res://Scenes/sky_crane.tscn" id="1_4pare"]
+[ext_resource type="PackedScene" uid="uid://drhnglmcb4cbl" path="res://Scenes/rover.tscn" id="2_akan7"]
+[ext_resource type="Texture2D" uid="uid://cmama77hq64t7" path="res://Images/SkyCrane.svg" id="2_y2idx"]
+[ext_resource type="Texture2D" uid="uid://cvrg5kbcg46tp" path="res://Images/Target.svg" id="3_5ep2d"]
+[ext_resource type="Script" path="res://Scripts/rover.gd" id="6_hju4f"]
+[ext_resource type="Theme" uid="uid://s4u84pppmrae" path="res://Themes/theme.tres" id="6_l37gu"]
+[ext_resource type="PackedScene" uid="uid://cuu8fch4uhnlv" path="res://Scenes/ground.tscn" id="6_v5vio"]
+[ext_resource type="Texture2D" uid="uid://b16rxk3lf2e4b" path="res://Images/ParralaxBackground.svg" id="7_xnwfl"]
+[ext_resource type="AudioStream" uid="uid://cep21rx6ei5jl" path="res://Audio/Music.wav" id="8_b1xcc"]
+[ext_resource type="Texture2D" uid="uid://b7qyglfndps5l" path="res://Images/ParralaxBackground2.svg" id="8_n6ixp"]
+[ext_resource type="Texture2D" uid="uid://cpml47s5b85ls" path="res://Images/Rover.svg" id="9_1g0g8"]
+[ext_resource type="Texture2D" uid="uid://c7g0jq7apnjel" path="res://Images/ParralaxBackground3.svg" id="9_01oqa"]
+[ext_resource type="Script" path="res://Scripts/AltitudeBar.gd" id="9_ltfcc"]
+[ext_resource type="Texture2D" uid="uid://b62ldumqc3pcs" path="res://Images/Bar.svg" id="10_tman4"]
+[ext_resource type="AudioStream" uid="uid://bijwmlprndd41" path="res://Audio/Success.wav" id="11_103bp"]
+[ext_resource type="Texture2D" uid="uid://bsp52ww8bsrc" path="res://Images/BarUnder.svg" id="13_0uth0"]
+[ext_resource type="Texture2D" uid="uid://qud13bkgj5f7" path="res://Images/BarOver.svg" id="14_m6dmi"]
+[ext_resource type="Texture2D" uid="uid://cb38fpy0b478u" path="res://Images/BarFill.svg" id="15_nhcgr"]
+[ext_resource type="Script" path="res://Scripts/ArrowContainer.gd" id="16_idb7o"]
+[ext_resource type="Texture2D" uid="uid://csotj4da8dn6k" path="res://Images/Arrow.svg" id="16_y0msp"]
+[ext_resource type="Texture2D" uid="uid://dtriymcllnrig" path="res://Images/button_large_up.svg" id="18_jqjxa"]
+[ext_resource type="Texture2D" uid="uid://bvus4u5uqxk4w" path="res://Images/button_large_down.svg" id="19_h6ml2"]
+[ext_resource type="Texture2D" uid="uid://d00fm3y6dcoqh" path="res://Images/button_small_up.svg" id="20_eubpy"]
+[ext_resource type="Texture2D" uid="uid://brkkophk7cmfl" path="res://Images/rotate_arrow_left.svg" id="21_7fxlb"]
+[ext_resource type="Texture2D" uid="uid://cicubtayc1x3i" path="res://Images/rotate_arrow_right.svg" id="22_il4w8"]
+[ext_resource type="Texture2D" uid="uid://df6bt32oa3ca8" path="res://Images/thrust_high.svg" id="23_8e0gd"]
+[ext_resource type="Texture2D" uid="uid://cqly4j1eocuvt" path="res://Images/thrust_low.svg" id="24_vq1ac"]
+[ext_resource type="Texture2D" uid="uid://b0s0q8hwg4o4" path="res://Images/Title.svg" id="26_5s6k5"]
+
+[sub_resource type="Animation" id="Animation_aerm6"]
+resource_name = "button_up_down_position_fix"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpaceButton:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(179.814, 302.409),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 12)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpaceButton:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [ExtResource("18_jqjxa"), ExtResource("19_h6ml2")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BottomLabel:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(999, 999),
+"update": 0,
+"values": [Vector2(0, 633), Vector2(0, 650)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_btxap"]
+_data = {
+"button_up_down_position_fix": SubResource("Animation_aerm6")
+}
+
+[sub_resource type="QuadMesh" id="QuadMesh_g6aoj"]
+size = Vector2(24, 128)
+center_offset = Vector3(0, 64, 0)
+
+[sub_resource type="Gradient" id="Gradient_110gc"]
+offsets = PackedFloat32Array(0, 0.491639, 1)
+colors = PackedColorArray(0.484375, 0.147583, 0, 1, 1, 0.3, 0, 1, 0.484375, 0.147583, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_hiogv"]
+gradient = SubResource("Gradient_110gc")
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_3vy16")
+final_zoom = 0.33
+zoom_speed = 2.0
+max_camera_offset = 600.0
+camera_speed = 0.9
+rope_min_length = 2.0
+rope_stiffness = 128.0
+rope_dampening = 12.0
+sky_crane_initial_speed = 0.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TitleSprite" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(640, 120)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("26_5s6k5")
+
+[node name="ButtonAnimationPlayer" type="AnimationPlayer" parent="CanvasLayer"]
+autoplay = "button_up_down_position_fix"
+libraries = {
+"": SubResource("AnimationLibrary_btxap")
+}
+
+[node name="SpaceButton" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(640, 670)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("19_h6ml2")
+offset = Vector2(0, 12)
+
+[node name="ButtonLeft" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(1004, 674.25)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("20_eubpy")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ButtonLeft"]
+position = Vector2(0, -20.3334)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("21_7fxlb")
+
+[node name="ButtonRight" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(1196, 674.25)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("20_eubpy")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ButtonRight"]
+position = Vector2(0, -20.3334)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("22_il4w8")
+
+[node name="ButtonUp" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(1099.88, 607.625)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("20_eubpy")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ButtonUp"]
+position = Vector2(0, -20.3334)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("23_8e0gd")
+
+[node name="ButtonDown" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(1099.88, 674.25)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("20_eubpy")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ButtonDown"]
+position = Vector2(0, -31.0001)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("24_vq1ac")
+
+[node name="HUDInfo" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -640.0
+offset_top = -360.0
+offset_right = -640.0
+offset_bottom = -360.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("6_l37gu")
+
+[node name="SpeedLabel" type="Label" parent="CanvasLayer/HUDInfo"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 629.0
+offset_right = 234.0
+offset_bottom = 666.0
+size_flags_horizontal = 0
+theme = ExtResource("6_l37gu")
+text = "Velocity  x: XX  y: YY"
+
+[node name="FuelMassLabel" type="Label" parent="CanvasLayer/HUDInfo"]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 550.0
+offset_right = 216.0
+offset_bottom = 587.0
+size_flags_horizontal = 0
+theme = ExtResource("6_l37gu")
+text = "XX kg"
+horizontal_alignment = 1
+
+[node name="FuelBarLabel" type="Label" parent="CanvasLayer/HUDInfo"]
+layout_mode = 2
+offset_left = 65.0
+offset_top = 225.0
+offset_right = 216.0
+offset_bottom = 262.0
+size_flags_horizontal = 0
+theme = ExtResource("6_l37gu")
+text = "Fuel"
+horizontal_alignment = 1
+
+[node name="AltitudeBar" type="Container" parent="CanvasLayer/HUDInfo"]
+layout_mode = 0
+offset_top = 33.0
+offset_right = 96.0
+offset_bottom = 533.0
+script = ExtResource("9_ltfcc")
+
+[node name="Bar" type="Sprite2D" parent="CanvasLayer/HUDInfo/AltitudeBar"]
+position = Vector2(48, 259)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("10_tman4")
+
+[node name="TargetIndicator" type="Sprite2D" parent="CanvasLayer/HUDInfo/AltitudeBar"]
+position = Vector2(50, 515)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_5ep2d")
+
+[node name="RoverIndicator" type="Sprite2D" parent="CanvasLayer/HUDInfo/AltitudeBar"]
+position = Vector2(47.2, 52)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("9_1g0g8")
+offset = Vector2(0, 110)
+
+[node name="SkyCraneIndicator" type="Sprite2D" parent="CanvasLayer/HUDInfo/AltitudeBar"]
+position = Vector2(49.6, 48.25)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("2_y2idx")
+
+[node name="FuelBar" type="TextureProgressBar" parent="CanvasLayer/HUDInfo"]
+layout_mode = 0
+offset_left = 126.0
+offset_top = 262.0
+offset_right = 166.0
+offset_bottom = 583.0
+scale = Vector2(0.875927, 0.875927)
+max_value = 1000.0
+value = 500.0
+fill_mode = 3
+texture_under = ExtResource("13_0uth0")
+texture_over = ExtResource("14_m6dmi")
+texture_progress = ExtResource("15_nhcgr")
+
+[node name="ArrowContainer" type="Container" parent="CanvasLayer/HUDInfo"]
+layout_mode = 0
+offset_left = 320.0
+offset_right = 960.0
+offset_bottom = 560.0
+script = ExtResource("16_idb7o")
+
+[node name="Arrow" type="Sprite2D" parent="CanvasLayer/HUDInfo/ArrowContainer"]
+position = Vector2(640, 360)
+texture = ExtResource("16_y0msp")
+
+[node name="BottomLabel" type="Label" parent="CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -640.0
+offset_top = -70.0
+offset_right = 640.0
+offset_bottom = -29.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("6_l37gu")
+text = "Press Space to Play"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="InfoLabel" type="Label" parent="CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -640.0
+offset_top = -133.0
+offset_right = 640.0
+offset_bottom = -92.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("6_l37gu")
+text = "Deliver the rover to the target below."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ControlsLabel" type="Label" parent="CanvasLayer"]
+visible = false
+offset_left = 1044.0
+offset_top = 491.0
+offset_right = 1270.0
+offset_bottom = 676.0
+size_flags_horizontal = 0
+theme = ExtResource("6_l37gu")
+text = "Controls
+ ↑  : increase thrust
+ ↓  : decrease thrust
+← : rotate left
+→ : rotate right"
+
+[node name="Ground" parent="." instance=ExtResource("6_v5vio")]
+position = Vector2(0, 8714)
+
+[node name="Target" type="Sprite2D" parent="."]
+position = Vector2(0, 8660)
+texture = ExtResource("3_5ep2d")
+
+[node name="Rope" type="MeshInstance2D" parent="."]
+position = Vector2(547, 212)
+mesh = SubResource("QuadMesh_g6aoj")
+texture = SubResource("GradientTexture1D_hiogv")
+
+[node name="SkyCrane" parent="." instance=ExtResource("1_4pare")]
+position = Vector2(548, 211)
+rotation = -0.523599
+disable_mode = 1
+max_thrust = 10000.0
+thrust_delta = 200.0
+max_angular_velocity = 2.0
+max_fuel = 1000.0
+empty_mass = 250.0
+
+[node name="Rover" parent="." instance=ExtResource("2_akan7")]
+position = Vector2(548, 211)
+rotation = -0.523599
+script = ExtResource("6_hju4f")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(619, 419)
+
+[node name="WinNoise" type="AudioStreamPlayer2D" parent="Camera2D"]
+position = Vector2(-619, -419)
+stream = ExtResource("11_103bp")
+volume_db = -6.0
+
+[node name="Music" type="AudioStreamPlayer2D" parent="Camera2D"]
+position = Vector2(-619, -419)
+stream = ExtResource("8_b1xcc")
+autoplay = true
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.25, 0.25)
+motion_mirroring = Vector2(5120, 2880)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+texture = ExtResource("7_xnwfl")
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(5120, 2880)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+texture = ExtResource("8_n6ixp")
+centered = false
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(5120, 2880)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+texture = ExtResource("9_01oqa")
+centered = false
+
+[connection signal="damaged" from="SkyCrane" to="." method="_on_sky_crane_damaged"]
+[connection signal="damaged" from="Rover" to="." method="_on_rover_damaged"]

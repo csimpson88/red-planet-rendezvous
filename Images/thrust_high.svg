@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="56.502441"
+   height="56.578125"
+   viewBox="0 0 56.502441 56.578125"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   sodipodi:docname="Sprites.svg"
+   inkscape:export-filename="Lander.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="605.99051"
+     inkscape:cy="1919.7949"
+     inkscape:window-width="2560"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer14">
+    <inkscape:grid
+       type="xygrid"
+       id="grid132"
+       dotted="false"
+       snapvisiblegridlinesonly="true"
+       empspacing="16"
+       empcolor="#000000"
+       empopacity="0.30196078"
+       originx="0"
+       originy="0" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient16840">
+      <stop
+         style="stop-color:#fff181;stop-opacity:1;"
+         offset="0"
+         id="stop16836" />
+      <stop
+         style="stop-color:#ff9900;stop-opacity:1;"
+         offset="1"
+         id="stop16838" />
+    </linearGradient>
+    <color-profile
+       name="Agfa-:-Swop-Standard"
+       xlink:href="file:///C:/WINDOWS/system32/spool/drivers/color/RSWOP.icm"
+       id="color-profile9023" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient16840"
+       id="radialGradient7828"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-0.39919725,1.2654061e-8,-1.1013152e-7,-0.8203086,432.90213,2441.2544)"
+       cx="168.95935"
+       cy="527.7807"
+       fx="168.95935"
+       fy="527.7807"
+       r="35.571785" />
+  </defs>
+  <g
+     inkscape:groupmode="layer"
+     id="layer14"
+     inkscape:label="Buttons"
+     transform="translate(-337.20276,-1993.4187)">
+    <path
+       style="display:inline;fill:url(#radialGradient7828);fill-opacity:1;stroke:none;stroke-width:0.405676px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 345.24038,2008.3114 20.21359,41.6855 20.21358,-41.6855 z"
+       id="path7826"
+       sodipodi:nodetypes="cccc"
+       inkscape:export-filename=".\Flame.svg"
+       inkscape:export-xdpi="100"
+       inkscape:export-ydpi="100" />
+    <path
+       style="display:inline;fill:#626871;fill-opacity:1;stroke:#000000;stroke-width:2.63218;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="m 356.97916,1994.8875 16.42464,-0.1485 16.60542,13.3482 -49.17227,0.4489 z"
+       id="path7835"
+       sodipodi:nodetypes="ccccc" />
+  </g>
+</svg>

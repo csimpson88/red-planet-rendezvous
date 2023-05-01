@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://drhnglmcb4cbl"]
+
+[ext_resource type="Texture2D" uid="uid://cpml47s5b85ls" path="res://Images/Rover.svg" id="1_1byxx"]
+[ext_resource type="AudioStream" uid="uid://ieusthyy6rpy" path="res://Audio/Impact.wav" id="2_cctnc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n4kq2"]
+size = Vector2(238, 87)
+
+[node name="Rover" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 129)
+texture = ExtResource("1_1byxx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-7, 143.5)
+shape = SubResource("RectangleShape2D_n4kq2")
+
+[node name="DamageNoise" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_cctnc")
