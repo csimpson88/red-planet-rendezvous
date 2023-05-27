@@ -6,3 +6,5 @@ export_presets.cfg
 .directory
 .DS_Store
 *~
+*.exe
+*.pck

@@ -100,6 +100,7 @@ sky_crane_initial_speed = 0.0
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="TitleSprite" type="Sprite2D" parent="CanvasLayer"]
+texture_repeat = 1
 position = Vector2(640, 120)
 scale = Vector2(0.65, 0.65)
 texture = ExtResource("26_5s6k5")
@@ -111,6 +112,7 @@ libraries = {
 }
 
 [node name="SpaceButton" type="Sprite2D" parent="CanvasLayer"]
+texture_repeat = 1
 position = Vector2(640, 670)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("19_h6ml2")
@@ -122,36 +124,43 @@ scale = Vector2(0.75, 0.75)
 texture = ExtResource("20_eubpy")
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ButtonLeft"]
+texture_repeat = 1
 position = Vector2(0, -20.3334)
 scale = Vector2(0.9, 0.9)
 texture = ExtResource("21_7fxlb")
 
 [node name="ButtonRight" type="Sprite2D" parent="CanvasLayer"]
+texture_repeat = 1
 position = Vector2(1196, 674.25)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("20_eubpy")
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ButtonRight"]
+texture_repeat = 1
 position = Vector2(0, -20.3334)
 scale = Vector2(0.9, 0.9)
 texture = ExtResource("22_il4w8")
 
 [node name="ButtonUp" type="Sprite2D" parent="CanvasLayer"]
+texture_repeat = 1
 position = Vector2(1099.88, 607.625)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("20_eubpy")
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ButtonUp"]
+texture_repeat = 1
 position = Vector2(0, -20.3334)
 scale = Vector2(0.9, 0.9)
 texture = ExtResource("23_8e0gd")
 
 [node name="ButtonDown" type="Sprite2D" parent="CanvasLayer"]
+texture_repeat = 1
 position = Vector2(1099.88, 674.25)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("20_eubpy")
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ButtonDown"]
+texture_repeat = 1
 position = Vector2(0, -31.0001)
 scale = Vector2(0.9, 0.9)
 texture = ExtResource("24_vq1ac")
@@ -322,6 +331,7 @@ rotation = -0.523599
 disable_mode = 1
 max_thrust = 10000.0
 thrust_delta = 200.0
+angular_inertia = 15.0
 max_angular_velocity = 2.0
 max_fuel = 1000.0
 empty_mass = 250.0

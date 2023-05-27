@@ -45,7 +45,7 @@ func _physics_process(delta: float) -> void:
 			w += max_angular_velocity
 		if Input.is_action_pressed("ui_left"):
 			w -= max_angular_velocity
-		angular_velocity = move_toward(angular_velocity, w, max_angular_velocity / angular_inertia)
+		angular_velocity = move_toward(angular_velocity, w, max_angular_velocity / (angular_inertia * mass / empty_mass))
 		
 		# get thrust inputs
 		if Input.is_action_pressed("ui_up"):
